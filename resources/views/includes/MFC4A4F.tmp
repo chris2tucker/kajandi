@@ -1,0 +1,165 @@
+ <!-- page level plugin styles -->
+
+  
+  <!-- /page level plugin styles -->
+<!--<link rel="stylesheet" href="{{ URL::asset('css/vendor/chosen_v1.4.0/chosen.min.css') }}">
+<link rel="stylesheet" href="{{ URL::asset('css/vendor/bootstrap-tagsinput/dist/bootstrap-tagsinput.css') }}">-->
+  <!-- build:css({.tmp,app}) styles/app.min.css -->
+  <link rel="stylesheet" href="{{ URL::asset('css/vendor/bootstrap/dist/css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ URL::asset('css/styles/font-awesome.css') }}">
+  <link rel="stylesheet" href="{{ URL::asset('css/styles/themify-icons.css') }}">
+  <link rel="stylesheet" href="{{ URL::asset('css/styles/animate.css') }}">
+  <link rel="stylesheet" href="{{ URL::asset('css/styles/sublime.css') }}">
+  <link rel="stylesheet" href="{{ URL::asset('css/styles/martial.css') }}">
+
+   <link rel="stylesheet" href="{{URL::asset('bootstrap-datepicker/css/bootstrap-material-datetimepicker.css') }}">
+  <!-- endbuild -->
+
+
+    <!-- Bootstrap Core JavaScript -->
+  
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+  <!-- load modernizer -->
+  
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- /#wrapper -->
+    
+        <script src="{{ URL::asset('js/jquery.min.js') }}"></script>
+       
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
+     <script src="{{ URL::asset('js/http _momentjs.com_downloads_moment-with-locales.min.js') }}"></script>
+        
+	  <script src="{{ URL::asset('bootstrap-datepicker/js/bootstrap-material-datetimepicker.js') }}"></script>
+  
+  <!-- <script src="{{ URL::asset('css/vendor/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js') }}"></script>-->
+   
+   <script src="{{ URL::asset('css/vendor/switchery/dist/switchery.js') }}"></script>
+  <!-- <script src="{{ URL::asset('css/vendor/iCheck/icheck.js') }}"></script>-->
+   
+
+   <script src="{{ URL::asset('css/vendor/fuelux/pillbox.js') }}"></script>
+   
+   <script src="{{ URL::asset('css/vendor/bootstrap/dist/js/bootstrap.js') }}"></script>
+  <script src="{{ URL::asset('css/vendor/slimScroll/jquery.slimscroll.js') }}"></script>
+  <script src="{{ URL::asset('css/vendor/jquery.easing/jquery.easing.js') }}"></script>
+  <script src="{{ URL::asset('css/vendor/jquery_appear/jquery.appear.js') }}"></script>
+  <script src="{{ URL::asset('css/vendor/jquery.placeholder.js') }}"></script>
+  <script src="{{ URL::asset('css/vendor/fastclick/lib/fastclick.js') }}"></script>
+  <!-- endbuild -->
+ 
+  <!-- page level scripts -->
+  <script src="{{ URL::asset('css/vendor/blockUI/jquery.blockUI.js') }}"></script>
+  <!-- /page level scripts -->
+
+  <!-- template scripts -->
+  <script src="{{ URL::asset('css/vendor/jquery-validation/dist/jquery.validate.min.js') }}"></script>
+  <script src="{{ URL::asset('js/scripts/offscreen.js') }}"></script>
+  <script src="{{ URL::asset('js/scripts/main.js') }}"></script>
+   <script src="{{ URL::asset('css/vendor/parsleyjs/dist/parsley.min.js') }}"></script>
+  <script>
+  	 var ajaxurl = "<?php echo config('custom.ajaxurl')?>";
+	 var siteurl = "<?php echo config('custom.siteurl')?>";
+	 
+  </script>
+
+@yield('scripts')
+@yield('script_src')
+
+
+<script>
+$(document).ready(function($) {
+      $("input[name='enable']").click(function(){
+               if ($(this).is(':checked')) {               
+                    $('input.textbox:text').attr("disabled", true);               
+                 }               
+               else if ($(this).not(':checked')) {   	                 
+                    
+                            $('input.textbox:text').attr("disabled", false);                            
+                           }           
+ }); 
+ 
+ jQuery('#start-time').bootstrapMaterialDatePicker({
+            date: false,
+            format: 'HH:mm',
+			clearButton: true
+        });
+		
+		 jQuery('#finish-time').bootstrapMaterialDatePicker({
+            date: false,
+            format: 'HH:mm',
+			clearButton: true
+        });
+		jQuery('#arival-time').bootstrapMaterialDatePicker({
+            date: false,
+            format: 'HH:mm',
+			clearButton: true
+        });
+		
+		jQuery('#arival-time').bootstrapMaterialDatePicker({
+            date: false,
+            format: 'HH:mm',
+			clearButton: true
+        });
+ 
+ 
+ $('#date').bootstrapMaterialDatePicker({ weekStart : 0, time: false }); 
+});
+</script>
+  
+    
+   
+    <script>
+		$(function(){
+			$('.delForm').submit(function(e) {
+				e.preventDefault();
+				var currentForm = this;
+				bootbox.confirm({
+					message: "You really want to delete this?",
+					buttons: {
+						confirm: {
+							label: 'Yes',
+							className: 'btn-danger'
+						},
+						cancel: {
+							label: 'No',
+							className: 'btn-success'
+						}
+					},
+					callback: function (result) {
+						if(result)
+							currentForm.submit();
+					}
+				});
+			});
+			
+			
+		})
+		
+		
+	</script>
+    <script>
+$(document).ready(function(){
+		
+		 
+
+
+		
+		
+		
+});
+	
+</script>
